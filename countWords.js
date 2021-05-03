@@ -7,11 +7,9 @@ function wordCount(sentence) {
   // console.log("SENTARR: ", sentArr);
   const validArr = [];
   
-  const regex = /[a-zA-Z0-9,;:!?"'\.]+/g;
-  
   for (let i = 0; i < sentArr.length; i++) {
     // console.log(sentArr[i], regex.test(sentArr[i]));
-    if (regex.test(sentArr[i])) {
+    if (/[a-zA-Z0-9,;:!?"'\.]+/g.test(sentArr[i])) {
       validArr.push(sentArr[i]);
     }
     // console.log(validArr, validArr.length);
